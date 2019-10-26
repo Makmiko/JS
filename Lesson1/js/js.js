@@ -1,11 +1,8 @@
 // Первое задание
 function isEven(num) {
-  num % 2 == 0
-    ? console.log("The number is even")
-    : console.log("The number is odd");
-  return 0;
+  return num % 2 == 0 ? "The number is even" : "The number is odd";
 }
-isEven(23);
+console.log(isEven(23));
 
 // Второе задание
 let m = 8.5,
@@ -14,14 +11,12 @@ let m = 8.5,
 function closerToTen(m, n) {
   m1 = Math.abs(m - 10); //Нахожу дельту и беру по модулю
   n1 = Math.abs(n - 10); //чтобы разница не уходила в отрицательные числа
-  m1 < n1 ? console.log(m) : console.log(n);
-  return 0;
+  return m1 < n1 ? m : n;
 }
-closerToTen(m, n);
+console.log(closerToTen(m, n));
 
 // Третье задание
 function parallelepipedSquare(height, length, width) {
-  console.log(2 * (height * length + height * width + length * width));
-  return 0;
+  return 2 * (height * length + height * width + length * width);
 }
-parallelepipedSquare(2, 3, 4);
+console.log(parallelepipedSquare(2, 3, 4));
