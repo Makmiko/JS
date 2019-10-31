@@ -28,7 +28,6 @@ function threeFive(min, max) {
     }
     console.log(i);
   }
-  return 0;
 }
 threeFive(1, 100);
 
