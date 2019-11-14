@@ -1,0 +1,35 @@
+/* body {
+  display: flex;
+
+} */
+table {
+  margin: auto auto 40px;
+}
+
+.counter {
+  color: coral;
+  font-size: 3em;
+  text-align: center;
+}
+
+.prizeBlock {
+  margin: auto;
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  content: "hello world";
+}
+
+.prizeItem {
+  box-sizing: border-box;
+  text-align: center;
+  flex: 1 0;
+  vertical-align: auto;
+  padding: 30px 10px;
+  margin: 15px 50px;
+  background: red;
+}
+
+.picked {
+  background: coral;
+}
