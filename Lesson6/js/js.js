@@ -55,6 +55,7 @@ let goods = [
 
 function tableGenerator(arr) {
   let tbl = document.createElement("table");
+  tbl.setAttribute("border", "1");
   let firstElementLen = Object.keys(arr[0]).length;
   let newRow = tbl.insertRow();
   for (let j = 0; j < firstElementLen; j++) {
