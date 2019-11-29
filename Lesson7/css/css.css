@@ -6,6 +6,14 @@ table {
   margin: auto auto 40px;
 }
 
+.loginHintsFail {
+  background: crimson;
+}
+
+.loginHintsSuccess {
+  background: greenyellow;
+}
+
 .counter {
   color: coral;
   font-size: 3em;

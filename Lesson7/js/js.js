@@ -188,3 +188,38 @@ form.checkbox.addEventListener("click", inpAccess);
 function inpAccess() {
   form.text.disabled = !form.checkbox.checked;
 }
+
+//Работа с формой
+form.elements.login.addEventListener("keyup", loginHintPopper);
+function loginHintPopper() {
+  let hints = form.getElementsByTagName("span");
+  if (
+    form.elements.login.value.length < 4 ||
+    form.elements.login.value.length > 10
+  ) {
+    hints[0].classList.remove("loginHintsSuccess");
+    hints[0].classList.add("loginHintsFail");
+  } else {
+    hints[0].classList.remove("loginHintsFail");
+    hints[0].classList.add("loginHintsSuccess");
+  }
+}
+
+form.elements.pwd.addEventListener("keyup", pwdHintPopper);
+function pwdHintPopper() {
+  let hints = form.getElementsByTagName("span");
+  if (form.elements.pwd.value.length < 6) {
+    hints[1].classList.remove("loginHintsSuccess");
+    hints[1].classList.add("loginHintsFail");
+  } else {
+    hints[1].classList.remove("loginHintsFail");
+    hints[1].classList.add("loginHintsSuccess");
+  }
+}
+form.elements.reset.addEventListener("click", loginHintPopper);
+form.elements.reset.addEventListener("click", pwdHintPopper);
+form.addEventListener("submit", submPrevent);
+function submPrevent(event) {
+  event.preventDefault();
+  console.log(form.elements.login.value, form.elements.pwd.value);
+}
