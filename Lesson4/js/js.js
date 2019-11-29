@@ -68,3 +68,34 @@ function pali(str) {
   return "Слово - не палиндром";
 }
 console.log(pali("Атака заката"));
+
+//Подстрока-палиндром
+function subPali(str) {
+  let sliceCounter = 0;
+  let maxPali = "";
+  let string = str
+    .toLowerCase()
+    .split(" ")
+    .join("");
+  let strReverse = string
+    .split("")
+    .reverse()
+    .join("");
+  for (let i = 0; i < str.length; i++) {
+    if (
+      string.substr(i, string.length) == strReverse.substr(i, string.length) &&
+      maxPali.length < string.length
+    ) {
+      maxPali = string;
+    } else {
+      sliceCounter++;
+      maxPali = subPali(string.slice(sliceCounter));
+    }
+  }
+  if (maxPali != "") {
+    return maxPali + " является максимальным палиндромом";
+  } else {
+    return "";
+  }
+}
+console.log(subPali("aabbccccba"));

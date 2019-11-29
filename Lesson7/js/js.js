@@ -186,9 +186,5 @@ function getPrize(event) {
 let form = document.forms.testForm;
 form.checkbox.addEventListener("click", inpAccess);
 function inpAccess() {
-  if (form.checkbox.checked) {
-    form.text.disabled = 0;
-  } else {
-    form.text.disabled = 1;
-  }
+  form.text.disabled = !form.checkbox.checked;
 }
