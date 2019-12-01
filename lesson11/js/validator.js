@@ -174,7 +174,7 @@ let messages = {
 };
 
 let successHandler = form => {
-  alert("Отправка успешно заполненной формы на");
+  alert("Отправка успешно заполненной формы на сервер");
 };
 
 let errorHandler = (form, errors, messages) => {
